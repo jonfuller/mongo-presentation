@@ -1,0 +1,10 @@
+source "http://rubygems.org"
+group :build do
+  gem 'albacore'
+  gem 'noodle'
+end
+
+group :dotnet do
+  gem 'norm'
+  gem 'nunit'
+end
