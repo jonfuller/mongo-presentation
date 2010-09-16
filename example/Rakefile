@@ -6,3 +6,13 @@ require 'noodle'
 Noodle::Rake::NoodleTask.new do |n|
   n.groups << :dotnet
 end
+
+MSBUILD = "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\msbuild.exe"
+
+msbuild do |msb|
+  msb.path_to_command = MSBUILD
+  msb.solution = 'src/example/example.sln'
+end
+
+task :default => [:msbuild]
+
